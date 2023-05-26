@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('Pull') {
        steps {
-        node ('master')
+        node ('master') {
           checkout scm
         } 
       }     
@@ -11,7 +11,7 @@ pipeline {
 
     stage('Build') {
       steps {
-        node ('master')
+        node ('master') {
           sh 'echo "hello ini pipeline"'
         }
       }
