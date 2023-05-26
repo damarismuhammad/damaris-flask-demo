@@ -2,9 +2,7 @@ pipeline {
   agent any
   stages {
     stage('Pull') {
-      steps {
-        git(credentialsId: 'damaris-ssh-project', url: 'git@github.com:damarismuhammad/damaris-flask-demo.git', branch: 'main')
-      }
+       checkout scm     
     }
 
     stage('Build') {
